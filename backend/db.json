@@ -1,0 +1,11 @@
+{
+  "alunos": [
+    {
+      "nome": "Phelipe Guedes",
+      "matricula": "3114104",
+      "curso": "Sistemas de Informação",
+      "email": "phelipe.guedes@hotmail.com",
+      "id": 1
+    }
+  ]
+}
