@@ -33,7 +33,7 @@ export default class AlunoCrud extends Component {
         )
     }
 
-    // chama a lista de usuários ao carregar a aplicação
+    // chama a lista de alunos ao carregar a aplicação
     componentWillMount() {
         this.loadAlunos();
     }
@@ -62,18 +62,18 @@ export default class AlunoCrud extends Component {
             });
     }
 
-    // remove um usuário
+    // remove um aluno
     remove(aluno) {
         axios.delete(`${baseUrl}/${aluno.id}`).then(response => {
             
-            // chama a lista de usuários removendo o usuário correspondente
+            // chama a lista de alunos removendo o aluno correspondente
             const list = this.getUpdatedList(aluno, false);
             this.setState({list});
         });
     }
 
     // atualiza a lista de usuários. 
-    // o segundo parâmetro diz se o usuário será adicionado na lista ou não
+    // o segundo parâmetro diz se o aluno será adicionado na lista ou não
     getUpdatedList(aluno, addAluno = true) {
         const list = this.state.list.filter(aln => aln.id !== aluno.id)
         
@@ -90,7 +90,7 @@ export default class AlunoCrud extends Component {
         this.setState({aluno});
     }    
 
-    // tabela que exibe os usuários cadastrados
+    // tabela que exibe os alunos cadastrados
     renderTable() {
         return (
             <table className="table table-responsive mt-4">
